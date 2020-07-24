@@ -1,4 +1,0 @@
-A simple phone book that perfomes basic functions like add a new name and number, delete a particular field, update a field, list all the data stored
-in the data structure. Also the data is written onto a file which will hold the values and can be retrieved from the same.
-
-/** Still in progress, More to follow **/

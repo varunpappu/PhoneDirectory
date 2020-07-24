@@ -1,0 +1,494 @@
+{
+	"info": {
+		"_postman_id": "952d9b68-62c7-4c88-a557-889ce5eb67b6",
+		"name": "Phone Directory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Contacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/public/v1/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"public",
+						"v1",
+						"contacts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Contacts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/contacts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"contacts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "804"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"324-eITlEu632oK13uchSALhfib1A58\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Jul 2020 00:53:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"SUCCESS\",\n    \"data\": [\n        {\n            \"uuid\": \"57e2a1ab-8d31-4378-911c-e81e357b2bee\",\n            \"contactName\": {\n                \"displayName\": \"Test User\",\n                \"nickname\": \"Test User\"\n            },\n            \"contactNumbers\": {\n                \"home\": \"123456\",\n                \"work\": \"123456\"\n            },\n            \"emailAddress\": {\n                \"work\": \"test@mail.com\"\n            },\n            \"address\": {\n                \"home\": \"Test Address\"\n            },\n            \"communicator\": {\n                \"skype\": \"test@skype\"\n            },\n            \"specialDates\": {\n                \"birthday\": \"10/10/1990\"\n            },\n            \"relationship\": {\n                \"father\": \"Test Father\"\n            },\n            \"notes\": \"Save Contact\"\n        },\n        {\n            \"uuid\": \"d93bf55c-30f9-4dc3-b470-0365134c56a2\",\n            \"contactName\": {\n                \"displayName\": \"Test User\",\n                \"nickname\": \"Test User\"\n            },\n            \"contactNumbers\": {\n                \"home\": \"123456\",\n                \"work\": \"123456\"\n            },\n            \"emailAddress\": {\n                \"work\": \"test@mail.com\"\n            },\n            \"address\": {\n                \"home\": \"Test Address\"\n            },\n            \"communicator\": {\n                \"skype\": \"test@skype\"\n            },\n            \"specialDates\": {\n                \"birthday\": \"10/10/1990\"\n            },\n            \"relationship\": {\n                \"father\": \"Test Father\"\n            },\n            \"notes\": \"Save Contact\"\n        }\n    ],\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Contacts based on Alphabets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/public/v1/trie-nodes/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"public",
+						"v1",
+						"trie-nodes",
+						"contacts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Contacts based on Alphabets",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/trie-nodes/contacts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"trie-nodes",
+								"contacts"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1202"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4b2-I179cldq2SG0Szw6b/CFzhjc3qk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Jul 2020 00:54:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"SUCCESS\",\n    \"data\": [\n        {\n            \"alphabet\": \"T\",\n            \"contacts\": [],\n            \"alphabetNode\": {\n                \"alphabet\": \"e\",\n                \"contacts\": [],\n                \"alphabetNode\": {\n                    \"alphabet\": \"s\",\n                    \"contacts\": [],\n                    \"alphabetNode\": {\n                        \"alphabet\": \"t\",\n                        \"contacts\": [],\n                        \"alphabetNode\": {\n                            \"alphabet\": \" \",\n                            \"contacts\": [],\n                            \"alphabetNode\": {\n                                \"alphabet\": \"U\",\n                                \"contacts\": [],\n                                \"alphabetNode\": {\n                                    \"alphabet\": \"s\",\n                                    \"contacts\": [],\n                                    \"alphabetNode\": {\n                                        \"alphabet\": \"e\",\n                                        \"contacts\": [],\n                                        \"alphabetNode\": {\n                                            \"alphabet\": \"r\",\n                                            \"contacts\": [\n                                                {\n                                                    \"uuid\": \"57e2a1ab-8d31-4378-911c-e81e357b2bee\",\n                                                    \"contactName\": {\n                                                        \"displayName\": \"Test User\",\n                                                        \"nickname\": \"Test User\"\n                                                    },\n                                                    \"contactNumbers\": {\n                                                        \"home\": \"123456\",\n                                                        \"work\": \"123456\"\n                                                    },\n                                                    \"emailAddress\": {\n                                                        \"work\": \"test@mail.com\"\n                                                    },\n                                                    \"address\": {\n                                                        \"home\": \"Test Address\"\n                                                    },\n                                                    \"communicator\": {\n                                                        \"skype\": \"test@skype\"\n                                                    },\n                                                    \"specialDates\": {\n                                                        \"birthday\": \"10/10/1990\"\n                                                    },\n                                                    \"relationship\": {\n                                                        \"father\": \"Test Father\"\n                                                    },\n                                                    \"notes\": \"Save Contact\"\n                                                },\n                                                {\n                                                    \"uuid\": \"d93bf55c-30f9-4dc3-b470-0365134c56a2\",\n                                                    \"contactName\": {\n                                                        \"displayName\": \"Test User\",\n                                                        \"nickname\": \"Test User\"\n                                                    },\n                                                    \"contactNumbers\": {\n                                                        \"home\": \"123456\",\n                                                        \"work\": \"123456\"\n                                                    },\n                                                    \"emailAddress\": {\n                                                        \"work\": \"test@mail.com\"\n                                                    },\n                                                    \"address\": {\n                                                        \"home\": \"Test Address\"\n                                                    },\n                                                    \"communicator\": {\n                                                        \"skype\": \"test@skype\"\n                                                    },\n                                                    \"specialDates\": {\n                                                        \"birthday\": \"10/10/1990\"\n                                                    },\n                                                    \"relationship\": {\n                                                        \"father\": \"Test Father\"\n                                                    },\n                                                    \"notes\": \"Save Contact\"\n                                                }\n                                            ]\n                                        }\n                                    }\n                                }\n                            }\n                        }\n                    }\n                }\n            }\n        }\n    ],\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Get a Contact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/public/v1/contacts/Test User",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"public",
+						"v1",
+						"contacts",
+						"Test User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"contactName\": {\n        \"displayName\": \"Test User\",\n        \"nickname\": \"Test User\"\n    },\n    \"contactNumbers\": {\n        \"home\": \"123456\",\n        \"work\": \"123456\"\n    },\n    \"emailAddress\": {\n        \"work\": \"test@mail.com\"\n    },\n    \"address\": {\n        \"home\": \"Test Address\"\n    },\n    \"communicator\": {\n        \"skype\": \"test@skype\"\n    },\n    \"specialDates\": {\n        \"birthday\": \"10/10/1990\"\n    },\n    \"relationship\": {\n        \"father\": \"Test Father\"\n    },\n    \"notes\": \"Save Contact\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/public/v1/contact/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"public",
+						"v1",
+						"contact",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Contact",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contactName\": {\n        \"displayName\": \"Test User\",\n        \"nickname\": \"Test User\"\n    },\n    \"contactNumbers\": {\n        \"home\": \"123456\",\n        \"work\": \"123456\"\n    },\n    \"emailAddress\": {\n        \"work\": \"test@mail.com\"\n    },\n    \"address\": {\n        \"home\": \"Test Address\"\n    },\n    \"communicator\": {\n        \"skype\": \"test@skype\"\n    },\n    \"specialDates\": {\n        \"birthday\": \"10/10/1990\"\n    },\n    \"relationship\": {\n        \"father\": \"Test Father\"\n    },\n    \"notes\": \"Save Contact\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/contact/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"contact",
+								"create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "68"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"44-KDNHTjfZ+I2QuOjJ+FeSHGy+kiE\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Jul 2020 00:52:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Successfully Created\",\n    \"success\": true\n}"
+				},
+				{
+					"name": "Create Contact",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contactName\": {\n        \"displayName\": \"Test User\",\n        \"nickname\": \"Test User\"\n    },\n    \"contactNumbers\": {\n        \"home\": \"123456\",\n        \"work\": \"123456\"\n    },\n    \"emailAddress\": {\n        \"work\": \"test@mail.com\"\n    },\n    \"address\": {\n        \"home\": \"Test Address\"\n    },\n    \"communicator\": {\n        \"skype\": \"test@skype\"\n    },\n    \"specialDates\": {\n        \"birthday\": \"10/10/1990\"\n    },\n    \"relationship\": {\n        \"father\": \"Test Father\"\n    },\n    \"notes\": \"Save Contact\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/contact/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"contact",
+								"create"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "68"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"44-KDNHTjfZ+I2QuOjJ+FeSHGy+kiE\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Jul 2020 00:51:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"SUCCESS\",\n    \"message\": \"Successfully Created\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Update A Contact",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"contactName\": {\n        \"displayName\": \"Test User1\",\n        \"nickname\": \"Test User\"\n    },\n    \"contactNumbers\": {\n        \"home\": \"123456\",\n        \"work\": \"123456\"\n    },\n    \"emailAddress\": {\n        \"work\": \"test@mail.com\"\n    },\n    \"address\": {\n        \"home\": \"Test Address\"\n    },\n    \"communicator\": {\n        \"skype\": \"test@skype\"\n    },\n    \"specialDates\": {\n        \"birthday\": \"10/10/1990\"\n    },\n    \"relationship\": {\n        \"father\": \"Test Father\"\n    },\n    \"notes\": \"Save Contact\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/public/v1/contacts/Test User/57e2a1ab-8d31-4378-911c-e81e357b2bee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"public",
+						"v1",
+						"contacts",
+						"Test User",
+						"57e2a1ab-8d31-4378-911c-e81e357b2bee"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update A Contact",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contactName\": {\n        \"displayName\": \"Test User1\",\n        \"nickname\": \"Test User\"\n    },\n    \"contactNumbers\": {\n        \"home\": \"123456\",\n        \"work\": \"123456\"\n    },\n    \"emailAddress\": {\n        \"work\": \"test@mail.com\"\n    },\n    \"address\": {\n        \"home\": \"Test Address\"\n    },\n    \"communicator\": {\n        \"skype\": \"test@skype\"\n    },\n    \"specialDates\": {\n        \"birthday\": \"10/10/1990\"\n    },\n    \"relationship\": {\n        \"father\": \"Test Father\"\n    },\n    \"notes\": \"Save Contact\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/contacts/Test User/57e2a1ab-8d31-4378-911c-e81e357b2bee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"contacts",
+								"Test User",
+								"57e2a1ab-8d31-4378-911c-e81e357b2bee"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "65"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"41-OdR8BzPYg1oi+fmrY7+gXJrIZbk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Jul 2020 00:59:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"SUCCESS\",\n    \"data\": \"Successfully Updated\",\n    \"success\": true\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete A Contact",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/public/v1/contacts/Test User/57e2a1ab-8d31-4378-911c-e81e357b2bee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"public",
+						"v1",
+						"contacts",
+						"Test User",
+						"57e2a1ab-8d31-4378-911c-e81e357b2bee"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete A Contact",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/contacts/Test User/57e2a1ab-8d31-4378-911c-e81e357b2bee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"contacts",
+								"Test User",
+								"57e2a1ab-8d31-4378-911c-e81e357b2bee"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "65"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"41-iN6CGYUCIx7+o9uI/cJkxveAidM\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Jul 2020 00:59:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"SUCCESS\",\n    \"data\": \"Successfully deleted\",\n    \"success\": true\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}

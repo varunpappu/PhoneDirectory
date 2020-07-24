@@ -1,0 +1,7 @@
+{
+    "javascript.format.insertSpaceAfterConstructor": true,
+    "typescript.format.insertSpaceAfterConstructor": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "typescript.implementationsCodeLens.enabled": true
+}
